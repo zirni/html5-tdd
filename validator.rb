@@ -102,6 +102,7 @@ end
 
 class Validator
   class Engine
+    # Use http://validator.nu/ as validator
     def self.get(str)
       e = <<-EOS
       <!DOCTYPE html>
