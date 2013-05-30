@@ -1,4 +1,5 @@
 require "ostruct"
+
 require "nokogiri"
 require 'equalizer'
 require "curb"

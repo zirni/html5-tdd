@@ -18,3 +18,28 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = 'random'
 end
+
+class Example1
+  INVALID_HTML = "<!DOCTYPE html>
+<html lang='en'>
+<head>
+<title>title</title>
+<meta charset='utf-8'>
+<meta content='content' name='description'>
+</head>
+<body>
+<img>
+</body>
+</html>".freeze
+
+VALID_HTML = "<!DOCTYPE html>
+<html lang='en'>
+<head>
+<title>title</title>
+<meta charset='utf-8'>
+<meta content='content' name='description'>
+</head>
+<body>
+</body>
+</html>".freeze
+end

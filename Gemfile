@@ -9,4 +9,5 @@ group :development, :test do
   gem "guard-rspec", "1.2.1"
   gem "yard", "~> 0.8.5.2"
   gem "yardstick", "~> 0.9.5"
+  gem "fakeweb", "~> 1.3"
 end

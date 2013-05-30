@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require "pathname"
+bin_file = Pathname.new(__FILE__).realpath
+
+# add self to libpath
+$:.unshift File.expand_path("../../lib", bin_file)
+
+require "html5/tdd/cli"
+
+if ARGV.count == 0
+  puts "Usage:\n\thtml5-tdd <uri>"
+else
+  HTML5::Tdd::Cli.run(ARGV)
+end
