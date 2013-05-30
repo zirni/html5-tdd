@@ -20,8 +20,8 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
-  spec.add_runtime_dependency "curb", "0.8.4"
-  spec.add_runtime_dependency "nokogiri", "1.5.8"
-  spec.add_runtime_dependency "equalizer", "0.0.5"
-  spec.add_runtime_dependency "colorize", "0.5.8"
+  spec.add_runtime_dependency "curb",      "~> 0.8.4"
+  spec.add_runtime_dependency "nokogiri",  "~> 1.5.8"
+  spec.add_runtime_dependency "equalizer", "~> 0.0.5"
+  spec.add_runtime_dependency "colorize",  "~> 0.5.8"
 end
