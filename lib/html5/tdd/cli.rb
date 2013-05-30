@@ -19,6 +19,7 @@ module HTML5
           res.errors.each_with_index do |error, i|
             puts "#{i + 1}. #{error.message}".red
             puts "\tFrom line #{error.location.ll}, column #{error.location.lc}; to line #{error.location.rl}, column #{error.location.rc}".cyan
+            puts "\t#{error.excerpt}"
             puts ""
           end
 

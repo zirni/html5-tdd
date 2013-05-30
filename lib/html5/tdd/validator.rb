@@ -20,8 +20,9 @@ module HTML5
         e = errors.map do |error|
           message = error.css("p:first span").text
           locations = error.css("p.location span").map(&:text).map(&:to_i)
+          excerpt = error.css("p.extract code").text
 
-          Error.new(message, Location.new(*locations))
+          Error.new(message, Location.new(*locations), excerpt)
         end
 
         Result.new(e)

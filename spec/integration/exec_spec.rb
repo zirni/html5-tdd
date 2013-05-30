@@ -1,3 +1,4 @@
+# encoding: utf-8
 require "spec_helper"
 
 require "open3"
@@ -37,9 +38,11 @@ describe "Executable" do
         stdout = o.read.chomp
         stdout.should include("1. Element img is missing required attribute src.
 \tFrom line 9, column 1; to line 9, column 5
+\td>↩<body>↩<img>↩</bod
 
 2. An img element must have an alt attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.
-\tFrom line 9, column 1; to line 9, column 5")
+\tFrom line 9, column 1; to line 9, column 5
+\td>↩<body>↩<img>↩</bod")
 
         stdout.should match(/Finished in \d+\.\d\d? seconds\n2 Errors/)
 

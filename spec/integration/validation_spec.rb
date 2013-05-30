@@ -1,3 +1,4 @@
+# encoding: utf-8
 require "spec_helper"
 
 module HTML5
@@ -34,6 +35,13 @@ module HTML5
           it "has errors messages" do
             subject.first.message.should eq("Element img is missing required attribute src.")
             subject.last.message.should eq("An img element must have an alt attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.")
+          end
+
+          describe :excerpt do
+            it "has error excerpts" do
+              subject.first.excerpt.should eq("d>↩<body>↩<img>↩</bod")
+              subject.last.excerpt.should eq("d>↩<body>↩<img>↩</bod")
+            end
           end
 
           describe :location do
