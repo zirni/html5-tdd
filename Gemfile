@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in html5-tdd.gemspec
 gemspec
 
+gem 'coveralls', require: false
+
 group :development, :test do
   gem "rspec", "2.11.0"
   gem "guard-bundler", "1.0.0"
