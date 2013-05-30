@@ -12,11 +12,9 @@ module HTML5
         body = open(argv.first).read
         res = Validator.validate(body)
 
-        if res.errors?
+        puts ""
 
-          puts ""
-          puts "HTML 5 Validator".underline
-          puts ""
+        if res.errors?
 
           res.errors.each_with_index do |error, i|
             puts "#{i + 1}. #{error.message}".red
@@ -27,13 +25,20 @@ module HTML5
           t_diff = (Time.now - t)
           t_diff = (t_diff * 100).to_i / 100.0
 
-          puts "Finished in #{t_diff} seconds".underline
+          puts "Finished in #{t_diff} seconds"
           puts "#{res.errors.count} Errors"
           puts ""
 
           exit 1
         else
-          puts "HTML is valid."
+          puts "HTML is valid.".green
+          puts ""
+
+          t_diff = (Time.now - t)
+          t_diff = (t_diff * 100).to_i / 100.0
+
+          puts "Finished in #{t_diff} seconds"
+          puts ""
         end
       end
     end

@@ -57,7 +57,7 @@ describe "Executable" do
         stderr.should eq("")
 
         stdout = o.read.chomp
-        stdout.should include("HTML is valid.")
+        stdout.should match(/HTML is valid.\n\nFinished in \d+\.\d\d? seconds/)
 
         exitstatus = t.value
         exitstatus.should eq(0)
