@@ -8,6 +8,8 @@
 require 'coveralls'
 Coveralls.wear!
 
+require 'devtools/spec_helper'
+
 require "html5/tdd"
 
 RSpec.configure do |config|
